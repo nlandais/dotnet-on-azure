@@ -18,7 +18,7 @@ jobs:
       uses: actions/checkout@master
 
     - name: Build the container
-      run: docker build . -t docker-sample:latest
+      run: docker build . -t docker-sample:${{ github.sha }}
 
 #     - name: dotnet publish
 #       run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
